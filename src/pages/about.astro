@@ -7,15 +7,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="text-3xl w-full font-bold mb-5">About</div>
     <div class="prose prose-lg max-w-none">
       <p>
-        I'm Ken Rhodes, a software developer based in Saint Paul, Minnesota.
+        I'm Ken Rhodes, a retired software developer and small business owner
+        based in Saint Paul, Minnesota.
         I build open-source tools for communities, with a focus on civic engagement
         and local coordination.
       </p>
       <p>
-        The name "impossible fork" comes from a lifelong fascination with optical
-        illusions -- the Blivet (also known as the Devil's Tuning Fork or the
-        "poiuyt"), the Penrose triangle, Escher's impossible staircases. Objects
-        that can't exist but look like they should.
+        I use Claude Code during development, and I've adopted the guidance provided
+        by Linus Torvalds and the Linux kernel maintainers for AI-assisted code
+        contributions, adapted for my MIT-licensed projects:
+        <ul>
+          <li>All code must be compatible with the MIT license only</li>
+          <li>
+             AI agents can't sign off on code contributions. The human contributor
+             is responsible for:
+             <ul>
+                <li>Reviewing all AI-generated code</li>
+                <li>Ensuring compliance with licensing requirements</li>
+                <li>Taking full responsibility for the contribution</li>
+             </ul>
+          </li>
+          <li>
+             All AI-assisted contributions must contain an Assisted-by tag in
+             the following format: Assisted by: AGENT_NAME:MODEL_VERSION
+          </li>
+        </ul>
       </p>
       <p>
         All of my projects are open source under the MIT license. If you're working
