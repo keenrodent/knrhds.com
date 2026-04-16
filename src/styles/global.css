@@ -22,6 +22,9 @@
   --color-success: #006230;
   --color-warning: #FCB316;
   --color-error: #5C0E41;
+  --rounded-box: 1rem;
+  --rounded-btn: 0.5rem;
+  --rounded-badge: 1rem;
 }
 
 .time-line-container>div:last-child .education__time>.education__line {
