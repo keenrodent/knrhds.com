@@ -1,3 +1,29 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes: knrhds --default;
+}
+@plugin "daisyui/theme" {
+  name: "knrhds";
+  default: true;
+  --color-primary: #C84113;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #13294B;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #FF5F05;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: #13294B;
+  --color-neutral-content: #C8C6C7;
+  --color-base-100: #FFFFFF;
+  --color-base-200: #F5F5F4;
+  --color-base-300: #E7E5E4;
+  --color-base-content: #13294B;
+  --color-info: #009FD4;
+  --color-success: #006230;
+  --color-warning: #FCB316;
+  --color-error: #5C0E41;
+}
+
 .time-line-container>div:last-child .education__time>.education__line {
     display: none;
 }
