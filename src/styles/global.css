@@ -22,8 +22,8 @@
   --color-success: #006230;
   --color-warning: #FCB316;
   --color-error: #5C0E41;
-  --radius-selector: 0.5rem;
-  --radius-field: 0.25rem;
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
   --radius-box: 0.5rem;
 }
 
