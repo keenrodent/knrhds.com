@@ -7,9 +7,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="text-3xl w-full font-bold mb-5">About</div>
     <div class="prose max-w-none">
       <p>
-        I'm Ken Rhodes, a retired software developer and small business owner
+        I'm Ken Rhodes, a retired software developer and a retired small business owner
         based in Saint Paul, Minnesota.
-        I build open-source tools for communities, with a focus on civic engagement
+        I make tools for myself and put them here. Lately I've been focused on civic engagement
         and local coordination.
       </p>
       <p>
@@ -35,7 +35,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </ul>
       <p>
         All of my projects are open source under the MIT license. If you're working
-        on something similar or want to deploy one of these tools in your community,
+        on something similar or want to deploy one of these tools,
         get in touch.
       </p>
 
@@ -48,7 +48,32 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <h3>Contact</h3>
       <p>
         <a href="mailto:k@knrhds.com">k@knrhds.com</a>
+        <span class="not-prose inline-flex items-center gap-2 align-middle ml-2">
+          <button id="copy-email" type="button" class="btn btn-xs btn-soft" data-email="k@knrhds.com">
+            Copy
+          </button>
+          <span id="copy-email-status" class="text-sm text-base-content/60" role="status" aria-live="polite"></span>
+        </span>
       </p>
     </div>
   </div>
 </BaseLayout>
+
+<script>
+  // Delegated so the handler survives ClientRouter page swaps.
+  document.addEventListener("click", async (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const button = target.closest("#copy-email");
+    if (!button) return;
+
+    const status = document.getElementById("copy-email-status");
+    try {
+      await navigator.clipboard.writeText(button.dataset.email);
+      status.textContent = "Copied";
+    } catch {
+      status.textContent = "Couldn't copy \u2014 select the address instead";
+    }
+    setTimeout(() => (status.textContent = ""), 3000);
+  });
+</script>
